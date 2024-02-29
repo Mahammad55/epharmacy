@@ -1,17 +1,5 @@
-server:
-  port: 8085
-  servlet:
-    context-path: /epharmacy
-
 spring:
-  datasource:
-    url: jdbc:mysql://localhost:3306/epharmacy
-    username: root
-    password: mysql
-    driver-class-name: com.mysql.cj.jdbc.Driver
-
-  jpa:
-    show-sql: true
-    hibernate:
-      ddl-auto: update
-    open-in-view: false
+  profiles:
+    include:
+      - common
+      - db
